@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css')}}">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Categorias Cadastradas</h3>
+    <a href="{{ url_for('categories.cadastrar') }}" class="btn btn-primary">+ Nova Categoria</a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover bg-white shadow-sm">
+      <thead class="table-dark">
+        <tr>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for categoria in categorias %}
+          <tr>
+            <td>{{ categoria.nome }}</td>
+            <td>
+              <a href="{{ url_for('categories.editar_categoria', id=categoria.id) }}" class="btn btn-sm btn-warning">Editar</a>
+              <form method="POST" action="{{ url_for('categories.excluir_categoria', id=categoria.id) }}" style="display: inline;" onsubmit="return confirm('Confirma exclusão?')">
+                <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

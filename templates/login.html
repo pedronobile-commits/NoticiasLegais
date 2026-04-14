@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css')}}">
+  <div class="card shadow-sm p-4 card-custom">
+    <h3 style="color: #0e2c58;"><center>Login</center></h3>
+    <hr />
+    <form method="POST">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label class="form-label"><b>E-mail</b></label>
+          <input type="email" name="email" class="form-control" placeholder="seuemail@email.com" required />
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label class="form-label"><b>Senha</b></label>
+          <input type="password" name="senha" class="form-control" placeholder="Sua senha" required />
+        </div>
+
+        <div class="col-12 mt-2">
+          <button type="submit" class="btn btn-preto w-100">Entrar</button>
+        </div>
+
+        <div class="col-12 mt-3 text-center">
+          <a href="{{ url_for('users.cadastrar') }}" class="btn btn-secondary">Não tem conta? Cadastre-se</a>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}

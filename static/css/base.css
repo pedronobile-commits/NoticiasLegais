@@ -1,0 +1,65 @@
+body {
+  background: linear-gradient(to right, #2c465c, #97acc9);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.btn-outline-dark:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.form-control {
+  padding: 4px 8px; 
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.navbar .btn {
+  border-radius: 20px;
+  padding: 6px 14px;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.navbar .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.navbar .form-control {
+  border-radius: 20px;
+  padding: 6px 12px;
+  border: none;
+  transition: 0.3s;
+}
+
+.navbar .form-control:focus {
+  box-shadow: 0 0 0 2px rgba(151, 172, 201, 0.6);
+}
+
+.navbar .btn-outline-dark {
+  border-radius: 20px;
+  padding: 6px 15px;
+  background: linear-gradient(to right, #2c465c, #97acc9);
+  color: white !important;
+  border: none;
+}
+
+.navbar .btn-outline-dark:hover {
+  background: linear-gradient(to right, #1e3447, #7f98b8);
+  transform: scale(1.05);
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(6px);
+}

@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/static/image/jornal.jpg") center/cover no-repeat;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+h3.mb-4 {
+  font-size: 30px;
+  display: inline-block;
+  border-bottom: 3px solid #6c85a3;
+  padding-bottom: 5px;
+  color: #000000;
+}
+p{
+  font-size: 20px;
+  color: #4b4b4b;
+}
+.card {
+  border-radius: 15px;
+  background: linear-gradient(rgba(108, 133, 163, 0.7), rgba(203, 219, 240, 0.7));
+  backdrop-filter: blur(6px); /* deixa mais bonito tipo vidro */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card h5 {
+  font-weight: 600;
+}
+
+.list-group-item {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.list-group-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-danger {
+  background-color: #8b0000;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #5a0000;
+}
+
+.btn-primary {
+  background-color: #0c0b0b;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+}
+
+.text-muted {
+  color: #444 !important;
+}

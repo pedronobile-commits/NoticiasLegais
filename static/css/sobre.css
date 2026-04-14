@@ -1,0 +1,68 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: url("/static/image/jornal.jpg") no-repeat center/cover;
+
+    filter: blur(7px) brightness(0.6); 
+    
+    z-index: -1;
+}
+.prim, .segun, .terc {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+
+}
+
+.prim {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: linear-gradient(to right, #2c465c, #97acc9);
+    color: #cfd9db;
+}
+
+.prim h2 {
+    margin-bottom: 15px;
+    font-size: 37px;
+    color: #003554;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.prim p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.segun {
+    border-left: 6px solid #032449;
+    background: linear-gradient(to right, #2c465c, #97acc9);
+    color: #cfd9db;
+}
+
+.segun p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.terc {
+    text-align: center;
+}
+
+.terc h5 {
+    margin: 10px 0;
+    font-size: 19px;
+    color: #010846;
+}
+

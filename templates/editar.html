@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css')}}">
+
+  <div class="card shadow-sm p-4 card-custom">
+    <h3><center>Editar Notícia</center></h3>
+    <hr />
+    <form method="POST" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label"><b>Título</b></label>
+          <input type="text" name="titulo" class="form-control" value="{{ noticia.titulo }}" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label"><b>Autor</b></label>
+          <input type="text" name="autor" class="form-control" value="{{ noticia.autor }}" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label"><b>Data de publicação</b></label>
+          <input type="date" name="data_publicacao" class="form-control" value="{{ noticia.data_publicacao|string|slice(0,10) }}" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label"><b>Fonte</b></label>
+          <input type="text" name="fonte" class="form-control" value="{{ noticia.fonte }}" />
+        </div>
+        <div class="col-md-12 mb-3">
+          <label class="form-label"><b>Texto</b></label>
+          <textarea name="conteudo" class="form-control" rows="5">{{ noticia.conteudo }}</textarea>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label"><b>Categoria</b></label>
+          <select name="nome_categoria" class="form-control" required>
+            <option value="">Selecione uma categoria</option>
+            {% for categoria in categorias %}
+            <option value="{{ categoria.nome }}" {% if noticia.categoria == categoria.nome %}selected{% endif %}>{{ categoria.nome }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label"><b>Imagem</b></label>
+          <input type="file" name="imagem" class="form-control" accept="image/*" />
+          {% if noticia.imagem %}
+            <div class="mt-2">
+              <img src="{{ noticia.imagem }}" alt="Imagem atual" style="max-width:200px; max-height:150px; object-fit:cover;" />
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-preto w-100">Atualizar Notícia</button>
+    </form>
+
+    <div class="mt-3 text-center">
+      <a href="{{ url_for('noticias.listar_noticias') }}" class="btn btn-secondary">Voltar para Notícias</a>
+    </div>
+  </div>
+{% endblock %}

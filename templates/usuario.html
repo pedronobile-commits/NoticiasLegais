@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/usu.css')}}">
+  <div class="container">
+    <h3 class="mb-4">Minha Conta</h3>
+    <p class="subtitulo">Gerencie suas informações e favoritos</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+          <h5>Informações Pessoais</h5>
+          <hr />
+          <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+          <p><strong>Email:</strong> {{ usuario.email }}</p>
+          <p><strong>ID:</strong> {{ usuario.id }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+          <h5>Minhas Notícias Favoritas</h5>
+          <hr />
+          {% if favoritas %}
+            <ul class="list-group">
+              {% for noticia in favoritas %}
+                <li class="list-group-item">
+                  <strong>{{ noticia.titulo }}</strong> - {{ noticia.autor }} ({{ noticia.categoria }})
+                  <br />
+                  <small>{{ noticia.conteudo[:100] }}...</small>
+                  <br />
+                  <a href="{{ url_for('favorites.remover', noticia_id=noticia.id) }}" class="btn btn-sm btn-danger mt-1">Remover</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p class="text-muted">Você ainda não tem notícias favoritas.</p>
+          {% endif %}
+          <a href="{{ url_for('favorites.listar') }}" class="btn btn-primary mt-3">Ver Todas as Favoritas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

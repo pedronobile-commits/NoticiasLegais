@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css')}}">
+    <div class="prim">
+        <h2>Sobre o Sistema</h2>
+        <p>O sistema foi desenvolvido para oferecer uma plataforma moderna e segura de publicação e gerenciamento de notícias. Ele permite que usuários naveguem por categorias, utilizem a barra de busca e acessem informações na seção “Sobre o Sistema”.
+            Usuários autenticados podem comentar nas notícias, salvar conteúdos como favoritos e, quando autorizados, cadastrar novas notícias. Também há opções de configuração de perfil para personalizar a experiência.
+            A segurança é garantida com o armazenamento criptografado das senhas no banco de dados. O menu principal é fixo em todas as páginas, com opções como Home, Categorias, Sobre o Sistema e Login, exibindo funcionalidades adicionais após a autenticação.
+        </p>
+    </div>
+        <br>
+    <div class="segun">
+        <p>Este sistema foi desenvolvido como um trabalho escolar, com o objetivo de aplicar na prática conceitos de desenvolvimento web e gerenciamento de conteúdo. A plataforma simula um portal de notícias, permitindo a navegação, interação entre usuários e publicação de conteúdos.
+            Por se tratar de um projeto acadêmico, algumas notícias exibidas podem não ser reais e foram criadas apenas para fins de teste e demonstração das funcionalidades do sistema.
+        </p>
+    </div>
+{% endblock %}
