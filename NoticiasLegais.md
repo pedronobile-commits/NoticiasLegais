@@ -54,3 +54,5 @@ http://localhost:5000
 Este projeto foi desenvolvido para fins educacionais
 Pode ser expandido com autenticação de usuários
 Estrutura preparada para crescimento e novas funcionalidades
+
+Desenvolvedores: Pedro Nobile, Laura Brasão, Michel
