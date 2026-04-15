@@ -1,4 +1,3 @@
-(https://github.com/user-attachments/files/26732465/NoticiasLegais.md)
 📰 NoticiasLegais
 
 Sistema web de gerenciamento de notícias desenvolvido com Python + Flask, utilizando arquitetura MVC (Model-View-Controller). O projeto permite criar, visualizar, editar e excluir notícias, além de organizar categorias e gerenciar favoritos.
@@ -11,6 +10,7 @@ Sistema web de gerenciamento de notícias desenvolvido com Python + Flask, utili
 ✅ Marcação de favoritos
 ✅ Organização em arquitetura MVC
 ✅ Integração com banco de dados (MySQL)
+
 🛠️ Tecnologias utilizadas
 Python
 Flask
@@ -18,6 +18,7 @@ HTML5
 CSS3
 MySQL
 Jinja2 (templates)
+
 📁 Estrutura do projeto
 NoticiasLegais/
 │
@@ -28,6 +29,7 @@ NoticiasLegais/
 ├── utils.py        # Funções auxiliares
 ├── script.sql      # Script do banco de dados
 └── .env            # Variáveis de ambiente
+
 ⚙️ Como executar o projeto
 Clone o repositório:
 git clone https://github.com/pedronobile-commits/NoticiasLegais.git
@@ -51,6 +53,7 @@ Execute o projeto:
 python app.py
 Acesse no navegador:
 http://localhost:5000
+
 📌 Observações
 Este projeto foi desenvolvido para fins educacionais
 Pode ser expandido com autenticação de usuários
